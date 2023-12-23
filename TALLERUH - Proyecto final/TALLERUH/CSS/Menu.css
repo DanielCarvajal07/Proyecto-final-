@@ -1,0 +1,62 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background: #272727;
+    font-family: "Montserrat", sans-serif;
+    margin: 0; /* Agregamos esta línea para quitar el margen predeterminado del cuerpo */
+}
+
+.navMenu {
+    position: fixed; /* Cambiamos a posición fija */
+    top: 0; /* Alineamos en la parte superior */
+    left: 50%;
+    -webkit-transform: translateX(-50%); /* Modificamos para centrar horizontalmente */
+    transform: translateX(-50%);
+    width: 100%; /* Ajustamos el ancho al 100% */
+    background: #272727; /* Añadimos fondo para la barra de navegación */
+    text-align: center; /* Centramos el texto */
+    z-index: 1000; /* Ajustamos el índice z para estar encima de otros elementos */
+}
+
+    .navMenu a {
+        color: #f6f4e6;
+        text-decoration: none;
+        font-size: 1.2em;
+        text-transform: uppercase;
+        font-weight: 500;
+        display: inline-block;
+        padding: 15px 20px; /* Añadimos espaciado para mejorar la usabilidad */
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+    }
+
+        .navMenu a:hover {
+            color: #fddb3a;
+        }
+
+    .navMenu .dot {
+        width: 6px;
+        height: 6px;
+        background: #fddb3a;
+        border-radius: 50%;
+        opacity: 0;
+        -webkit-transform: translateX(30px);
+        transform: translateX(30px);
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+    }
+
+/* Eliminamos las seudoclases :nth-child y los selectores ~ para simplificar */
+
+.dot.active {
+    opacity: 1;
+}
+
+.navMenu a.active {
+    color: #fddb3a;
+}
